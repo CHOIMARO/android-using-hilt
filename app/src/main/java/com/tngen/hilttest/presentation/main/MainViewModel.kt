@@ -1,4 +1,4 @@
-package com.tngen.hilttest
+package com.tngen.hilttest.presentation.main
 
 import androidx.lifecycle.*
 import com.tngen.hilttest.data.entity.NoteEntity

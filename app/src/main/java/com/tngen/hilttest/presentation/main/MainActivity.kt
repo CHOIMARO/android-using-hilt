@@ -1,4 +1,4 @@
-package com.tngen.hilttest
+package com.tngen.hilttest.presentation.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,8 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.activity.viewModels
-import java.util.*
-import kotlin.collections.ArrayList
+import com.tngen.hilttest.R
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
