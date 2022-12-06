@@ -1,10 +1,10 @@
 package com.tngen.hilttest.presentation.main
 
 import androidx.lifecycle.*
-import com.tngen.hilttest.data.entity.NoteEntity
-import com.tngen.hilttest.data.model.HouseModel
-import com.tngen.hilttest.domain.HiltUseCase
-import com.tngen.hilttest.domain.RetrofitUseCase
+import com.tngen.domain.HiltUseCase
+import com.tngen.domain.RetrofitUseCase
+import com.tngen.domain.entity.NoteEntity
+import com.tngen.domain.model.HouseModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

@@ -7,6 +7,14 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HiltTest.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HiltTest.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HiltTest.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HiltTest.app.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HiltTest.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HiltTest.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/HiltTest.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/HiltTest.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/HiltTest.data.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/data/HiltTest.data.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/HiltTest.data.main.iml" filepath="$PROJECT_DIR$/.idea/modules/data/HiltTest.data.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/HiltTest.data.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/data/HiltTest.data.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/HiltTest.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/HiltTest.domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/HiltTest.domain.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/HiltTest.domain.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/HiltTest.domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/HiltTest.domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/HiltTest.domain.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/HiltTest.domain.unitTest.iml" />
     </modules>
   </component>
 </project>
