@@ -1,36 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".presentation.main.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <EditText
-        android:id="@+id/note_title"
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.tngen.hilttest.presentation.main.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:hint="Title"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        tools:context=".presentation.main.MainActivity">
 
-    <EditText
-        android:id="@+id/note_description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:hint="description"
-        app:layout_constraintTop_toBottomOf="@id/note_title"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        <EditText
+            android:id="@+id/note_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:hint="Title"
+            android:text="@={viewModel.note.title}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/save_btn"
-        android:text="save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_margin="20dp"/>
+        <EditText
+            android:id="@+id/note_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:hint="description"
+            android:text="@={viewModel.note.description}"
+            app:layout_constraintTop_toBottomOf="@id/note_title"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/save_btn"
+            android:text="save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:onClick="@{()-> viewModel.saveNote()}"
+            android:layout_margin="20dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

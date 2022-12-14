@@ -7,32 +7,25 @@ import android.widget.EditText
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.activity.viewModels
 import com.tngen.hilttest.R
+import com.tngen.hilttest.databinding.ActivityMainBinding
+import com.tngen.hilttest.presentation.base.BaseActivity
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
-    private val mainViewModel: MainViewModel by viewModels()
-
-
+class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(R.layout.activity_main) {
+    override val viewModel: MainViewModel by viewModels()
+    override fun initData() {
+        binding.viewModel = viewModel
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-
-        findViewById<Button>(R.id.save_btn).setOnClickListener {
-            mainViewModel.saveNote(
-                title = findViewById<EditText>(R.id.note_title).text.toString(),
-                description = findViewById<EditText>(R.id.note_description).text.toString()
-            )
+        viewModel.note.observe(this) {
+            binding.noteTitle.setText(it.title)
         }
 
-        mainViewModel.note.observe(this, {
-            findViewById<EditText>(R.id.note_title).setText(it.title)
-//            findViewById<EditText>(R.id.note_description).setText(it.description)
-
-        })
-
-        mainViewModel.house.observe(this, {
-            findViewById<EditText>(R.id.note_description).setText(it.count())
-        })
+        viewModel.house.observe(this) {
+            binding.noteDescription.setText(it.count())
+        }
     }
+
 }
