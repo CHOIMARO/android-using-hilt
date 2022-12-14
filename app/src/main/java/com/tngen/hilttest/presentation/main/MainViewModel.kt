@@ -32,7 +32,6 @@ class MainViewModel @Inject constructor(
     }
 
     fun saveNote() {
-        Log.d("MainViewModel", "dddddddd")
         viewModelScope.launch {
             _note.value?.let { hiltUseCase.saveNote(it) }
 
