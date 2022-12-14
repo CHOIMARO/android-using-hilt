@@ -4,7 +4,8 @@ import com.tngen.domain.model.HouseModel
 import com.tngen.domain.repository.HouseRepository
 import com.tngen.data.service.HouseService
 import javax.inject.Inject
-
+/**
+ * */
 class HouseRepositoryImpl @Inject constructor(
     private val houseService: HouseService
 ) : HouseRepository {

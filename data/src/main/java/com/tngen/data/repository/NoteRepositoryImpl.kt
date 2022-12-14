@@ -1,4 +1,4 @@
-package com.tngen.hilttest.data.repository
+package com.tngen.data.repository
 
 import com.tngen.data.db.dao.NoteDAO
 import com.tngen.domain.entity.NoteEntity

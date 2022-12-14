@@ -5,7 +5,7 @@ import androidx.room.Room
 import com.tngen.data.db.NoteDatabase
 import com.tngen.data.db.dao.NoteDAO
 import com.tngen.domain.repository.NoteRepository
-import com.tngen.hilttest.data.repository.NoteRepositoryImpl
+import com.tngen.data.repository.NoteRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
