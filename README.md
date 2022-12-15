@@ -1,5 +1,5 @@
 # android-using-hilt
-##Android 환경에서 Hilt를 사용한 예시 샘플 코드입니다. (Retrofit2 / DB 포함 / 멀티 모듈 / MVVM / CleanArchitecture / DataBinding)
+## Android 환경에서 Hilt를 사용한 예시 샘플 코드입니다. (Retrofit2 / DB 포함 / 멀티 모듈 / MVVM / CleanArchitecture / DataBinding)
 
 ### 이 코드는 MVVM패턴과 Clean Architecture를 기반으로 멀티모듈을 사용하여 제작한 프로그램입니다.
 ### 이 프로그램의 목적은 간단한 Hilt 사용과 Retrofit이 구현되어 있으며 
