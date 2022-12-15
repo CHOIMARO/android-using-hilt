@@ -8,6 +8,7 @@ import com.tngen.domain.entity.NoteEntity
 import com.tngen.domain.model.HouseModel
 import com.tngen.hilttest.presentation.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -24,6 +25,11 @@ class MainViewModel @Inject constructor(
     val house : LiveData<List<HouseModel>>
         get() = _house
 
+
+    override fun fetchData(): Job {
+
+        return super.fetchData()
+    }
 
     init {
         viewModelScope.launch {
