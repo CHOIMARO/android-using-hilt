@@ -3,16 +3,18 @@ package com.tngen.data.repository
 import com.tngen.data.db.dao.NoteDAO
 import com.tngen.domain.entity.NoteEntity
 import com.tngen.domain.repository.NoteRepository
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class NoteRepositoryImpl @Inject constructor(
-    private val noteDAO: NoteDAO
+    private val noteDAO: NoteDAO,
+    private val ioDispatcher: CoroutineDispatcher
 ) : NoteRepository {
     override suspend fun getNote() : NoteEntity {
-        return withContext(Dispatchers.IO) {
-            if(noteDAO.getNote().count() > 0 ) {
+        return withContext(ioDispatcher) {
+            if(noteDAO.getNote().isNotEmpty()) {
                 noteDAO.getNote()[0]
             }else {
                 NoteEntity(
@@ -21,7 +23,6 @@ class NoteRepositoryImpl @Inject constructor(
                     description = "empty"
                 )
             }
-
         }
     }
     override suspend fun saveNote(note : NoteEntity) {

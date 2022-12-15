@@ -8,6 +8,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineDispatcher
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -52,10 +53,12 @@ class NetworkModule {
     @Singleton
     @Provides
     fun provideHouseRepository(
-        houseService: HouseService
+        houseService: HouseService,
+        @CoroutinesQualifiers.IoDispatcher coroutineDispatcher: CoroutineDispatcher
     ) : HouseRepository {
         return HouseRepositoryImpl(
-            houseService
+            houseService,
+            coroutineDispatcher
         )
     }
 
